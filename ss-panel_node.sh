@@ -33,7 +33,7 @@ install_ss_panel(){
 		fi
 	}
 	install_soft_for_each
-	wget -c https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/lnmp1.3.zip && unzip lnmp1.3.zip && cd lnmp1.3 && chmod +x install.sh && ./install.sh lnmp
+	wget -c https://raw.githubusercontent.com/ruike007/feiyan-ss-panel-and-ss-py-mu/master/lnmp1.3.zip && unzip lnmp1.3.zip && cd lnmp1.3 && chmod +x install.sh && ./install.sh lnmp
 	chattr -i /home/wwwroot/default/.user.ini
 	rm -rf /home/wwwroot/default
 	git clone https://github.com/mmmwhy/ss-panel.git "/home/wwwroot/default"
@@ -45,7 +45,7 @@ install_ss_panel(){
 	mysql -uroot -proot -e"create database ss;" 
 	mysql -uroot -proot -e"use ss;" 
 	mysql -uroot -proot ss < /home/wwwroot/default/db.sql
-	wget -N -P  /usr/local/nginx/conf/ --no-check-certificate https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/nginx.conf
+	wget -N -P  /usr/local/nginx/conf/ --no-check-certificate https://raw.githubusercontent.com/ruike007/feiyan-ss-panel-and-ss-py-mu/master/nginx.conf
 	lnmp nginx restart
 }
 
@@ -55,7 +55,7 @@ install_ss_py_mu(){
 	echo
 	echo "#############################################################"
 	echo "# One click Install Shadowsocks-Python-Manyuser             #"
-	echo "# Github: https://github.com/mmmwhy/ss-panel-and-ss-py-mu   #"
+	echo "# Github: https://github.com/ruike007/feiyan-ss-panel-and-ss-py-mu   #"
 	echo "# Author: 91vps                                             #"
 	echo "#############################################################"
 	echo
@@ -89,7 +89,7 @@ install_ss_py_mu(){
 			echo "Will install below software on your centos system:"
 			yum install git lsof -y
 			yum -y install python-setuptools  
-			curl https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/get-pip.py -o get-pip.py
+			curl https://raw.githubusercontent.com/ruike007/feiyan-ss-panel-and-ss-py-mu/master/get-pip.py -o get-pip.py
 			python get-pip.py
 			rm -rf python get-pip.py
 			yum -y groupinstall "Development Tools"
@@ -217,7 +217,7 @@ one_click_all(){
 	echo "#############################################################"
 	echo "# 安装完成，登录http://${IPAddress}看看吧~                  #"
 	echo "# 用户名: 91vps 密码: 91vps                                 #"
-	echo "# Github: https://github.com/mmmwhy/ss-panel-and-ss-py-mu   #"
+	echo "# Github: https://github.com/ruike007/feiyan-ss-panel-and-ss-py-mu   #"
 	echo "# Author: 91vps                                             #"
 	echo "#############################################################"
 }
@@ -226,7 +226,7 @@ one_click_all(){
 echo
 echo "#############################################################"
 echo "# One click Install SS-panel and Shadowsocks-Py-Mu          #"
-echo "# Github: https://github.com/mmmwhy/ss-panel-and-ss-py-mu   #"
+echo "# Github: https://github.com/ruike007/feiyan-ss-panel-and-ss-py-mu   #"
 echo "# Author: 91vps                                             #"
 echo "# Please choose the server you want                         #"
 echo "# 1  SS-panel + SS-node One click Install                   #"
